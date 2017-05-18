@@ -1,7 +1,7 @@
 package wrapper;
 
 public class Demo1 {
-	/*°ü×°Àà£º
+	/*åŒ…è£…ç±»ï¼š
 	 * byte 
 	 * short
 	 * int 
@@ -10,37 +10,39 @@ public class Demo1 {
 	 * boolean
 	 * float
 	 * double 
-	 * °ü×°ÀàµÄ×÷ÓÃ:
-	 * 1.¿ÉÒÔÊµÏÖ»ù±¾Êı¾İÀàĞÍºÍ×Ö·û´®ÀàĞÍµÄ×ª»»
-	 * 2.½øÖÆÖ®¼äµÄ×ª»»
+	 * åŒ…è£…ç±»çš„ä½œç”¨:
+	 * 1.å¯ä»¥å®ç°åŸºæœ¬æ•°æ®ç±»å‹å’Œå­—ç¬¦ä¸²ç±»å‹çš„è½¬æ¢
+	 * 2.è¿›åˆ¶ä¹‹é—´çš„è½¬æ¢
 	 */
 	public static void main(String[] args) {
 	  System.out.println(Integer.MIN_VALUE);
-	  //»ù±¾Êı¾İ×ª»»Îª×Ö·û´®
+	  //åŸºæœ¬æ•°æ®è½¬æ¢ä¸ºå­—ç¬¦ä¸²
 	  String s1=Integer.toString(3);
 	  System.out.println(s1);
 	  
 	  String s2=String.valueOf(false);
 	  System.out.println(s2);
 	  
-	  //×Ö·û´®ÀàĞÍ×ª»»Îª»ù±¾Êı¾İ
+	  //å­—ç¬¦ä¸²ç±»å‹è½¬æ¢ä¸ºåŸºæœ¬æ•°æ®
        int age=Integer.parseInt("25");
        System.out.println(age);
        double d=Double.parseDouble("23.56");
        System.out.println(d);
        
-       //Ê®½øÖÆ×ªÎªÆäËû½øÖÆ
-      String s3=Integer.toHexString(60);//Ê®Áù½øÖÆ
+       //åè¿›åˆ¶è½¬ä¸ºå…¶ä»–è¿›åˆ¶
+      String s3=Integer.toHexString(60);//åå…­è¿›åˆ¶
       System.out.println(s3);
-      String s4=Integer.toOctalString(60);//°Ë½øÖÆ
+      String s4=Integer.toOctalString(60);//å…«è¿›åˆ¶
       System.out.println(s4);
-      String s5=Integer.toBinaryString(60);//¶ş½øÖÆ
+      String s5=Integer.toBinaryString(60);//äºŒè¿›åˆ¶
       System.out.println(s5);
-      //ÆäËû½øÖÆ×ª»»ÎªÊ®½øÖÆ
-      int num1=Integer.parseInt("3c", 16);//16±íÊ¾Õâ¸öÊıÊÇ¶àÉÙ½øÖÆµÄ
+      //å…¶ä»–è¿›åˆ¶è½¬æ¢ä¸ºåè¿›åˆ¶
+      int num1=Integer.parseInt("3c", 16);//16è¡¨ç¤ºè¿™ä¸ªæ•°æ˜¯å¤šå°‘è¿›åˆ¶çš„
       System.out.println(num1);
       
-      //×Ô¶¯×°Ïä²ğÏä-----Ò»¸öÊıÈç¹ûÒÑ¾­´´½¨¶ÔÏóÁË£¬ÄÇÃ´ÔÙ´Î´´½¨£¬Ê¹ÓÃÒÑÓĞµÄ
+      //è‡ªåŠ¨è£…ç®±æ‹†ç®±-----ä¸€ä¸ªæ•°å¦‚æœå·²ç»åˆ›å»ºå¯¹è±¡äº†ï¼Œé‚£ä¹ˆå†æ¬¡åˆ›å»ºï¼Œä½¿ç”¨å·²æœ‰çš„
+      //åœ¨è‡ªåŠ¨è£…ç®±æ—¶å¯¹äºå€¼ä»â€“128åˆ°127ä¹‹é—´çš„å€¼ï¼Œå®ƒä»¬è¢«è£…ç®±ä¸ºIntegerå¯¹è±¡åï¼Œä¼šå­˜åœ¨å†…å­˜ä¸­è¢«é‡ç”¨ï¼Œå§‹ç»ˆåªå­˜åœ¨ä¸€ä¸ªå¯¹è±¡
+      //è€Œå¦‚æœè¶…è¿‡äº†ä»â€“128åˆ°127ä¹‹é—´çš„å€¼ï¼Œè¢«è£…ç®±åçš„Integerå¯¹è±¡å¹¶ä¸ä¼šè¢«é‡ç”¨ï¼Œå³ç›¸å½“äºæ¯æ¬¡è£…ç®±æ—¶éƒ½æ–°å»ºä¸€ä¸ª Integerå¯¹è±¡ï¼›
 	}
 	
 }
