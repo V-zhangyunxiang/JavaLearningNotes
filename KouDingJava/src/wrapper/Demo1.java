@@ -23,12 +23,13 @@ public class Demo1 {
 	  String s2=String.valueOf(false);
 	  System.out.println(s2);
 	  
-	  //字符串类型转换为基本数据
+       //字符串类型(该字符串必须为数字，文字会报java.lang.NumberFormatException)转换为基本数据
        int age=Integer.parseInt("25");
        System.out.println(age);
        double d=Double.parseDouble("23.56");
        System.out.println(d);
-       
+	Double s=Double.valueOf("24");	
+        System.out.println(s);
        //十进制转为其他进制
       String s3=Integer.toHexString(60);//十六进制
       System.out.println(s3);
