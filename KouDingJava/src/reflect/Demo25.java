@@ -22,10 +22,13 @@ public class Demo25 {
 	     //getcalss3();
 		//得到字节码文件
 		Class<?> claz=Class.forName("reflect.Person");
-		//得到类对象
+		//创建类对象，Object 可以写成某个具体类
+		//第一种：通过 Class 对象的 newInstance() 方法。
 		Object obj=claz.newInstance();
-//		Person p=(Person)claz.newInstance();
-//		p.show();
+        //第二种：通过 Constructor 对象的 newInstance() 方法
+         Constructor constructor = clz.getConstructor();
+         Object obj = constructor.newInstance();
+
 		//得到属性
 		//Field field=claz.getField("name");//只能得到public权限的属性
 		Field field2=claz.getDeclaredField("name");//可得到任何权限的属性
@@ -35,8 +38,8 @@ public class Demo25 {
 		
 		//得到方法
 		Method method=claz.getMethod("show", null);//getMethod(方法名,方法的参数类型,如int.class)
-//              Method method=claz.getDeclaredMethod("show", null);
-                method.setAccessible(true);//设置可以访问,不然无法调用
+        //Method method=claz.getDeclaredMethod("show", null);
+        method.setAccessible(true);//设置可以访问,不然无法调用
 		method.invoke(obj, null);//invoke(对象,给方法传的实参)
 		
 	}
@@ -55,9 +58,9 @@ public class Demo25 {
 	}
 	public static void createobj() throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
 		Class<?> claz=Class.forName("reflect.Person");//得到字节码对象
-		
+		//创建类对象,调用有参的构造方法
 		Constructor con=claz.getConstructor(String.class,int.class);
-		Object obj=con.newInstance("李四",23);//创建类对象,调用有参的构造方法
+		Object obj=con.newInstance("李四",23);
 	}
 
 }

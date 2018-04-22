@@ -1,4 +1,3 @@
-<
 package tool;
 
 import java.util.Arrays;

@@ -24,15 +24,13 @@ public class Demo18 {
 //		while((num=fis.read())!=-1){
 //			System.out.print((char)num);
 //		}
-		
 //      int size=fis.available();//返回文件的总大小,替代1024,不适合大文件
-
 //		byte[] b=new byte[1024];
 //		while((num=fis.read(b))!=-1){
 //			System.out.print(new String(b,0,num));
 //		}
 		
-//复制一张图片
+        //复制一张图片
 		FileInputStream fis=new FileInputStream("diqiu.jpg");
 		FileOutputStream fos=new FileOutputStream("diqiucopy.jpg");
 		
