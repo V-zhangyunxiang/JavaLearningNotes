@@ -1,4 +1,3 @@
-
 package date;
 
 import java.util.Date;
@@ -6,12 +5,12 @@ import java.util.Date;
 public class Demo2 {
 	
 	public static void main(String[] args) {
-		//longÀàĞÍ×ª»»Îªdate
+		//long è½¬åŒ–ä¸º date
 		long s=System.currentTimeMillis();
 		Date date=new Date(s);
 		System.out.println(date);
 	
-         //date×ª»»Îªlong
+         //date è½¬åŒ–ä¸º long
 		long l=date.getTime();
 		System.out.println(l);
 	}
